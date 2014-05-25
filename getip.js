@@ -15,16 +15,16 @@ child = exec("ifconfig", function (error, stdout, stderr) {
 
 			// found a line that begins with an interface name
 			interface = line.substring(0, line.indexOf(':'));
-	
+
 		} else {
-	
+
 			// find the IP of the found interface
 			var str = /inet /;
-	
+
 			if ( line.match(str) ) {
 				found[interface] = line.split(' ')[1];
 			}
-	
+
 		}
 
 	});
