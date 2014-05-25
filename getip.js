@@ -1,6 +1,6 @@
 // return list of 'active' interfaces
 
-var exec = require('child_process').exec,
+var exec = require('child_process').execFile,
 	child;
 
 child = exec("ifconfig", function (error, stdout, stderr) {
